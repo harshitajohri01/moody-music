@@ -105,7 +105,7 @@ async function searchAndPlayMusic(emotion) {
     const query = genres[Math.floor(Math.random() * genres.length)];
 
     try {
-        const res = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&type=video&videoCategoryId=10&key=AIzaSyBHyNAr5JVvvL0SRetEHBtnpQTz3O4V4uw`);
+        const res = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&type=video&videoCategoryId=10&key=`);
         const data = await res.json();
         if (data.items && data.items.length > 0) {
             const videoId = data.items[0].id.videoId;
